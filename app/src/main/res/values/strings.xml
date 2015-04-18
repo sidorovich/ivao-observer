@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IVAO Observer</string>
+    <string name="ivao_status_url">http://www.ivao.aero/whazzup/status.txt</string>
 </resources>
