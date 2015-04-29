@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">IVAO Observer</string>
+
+    <string name="something_wrong">Something wrong!</string>
+    <string name="empty_whazzup_url">Empty URL for getting network info. Try again later.</string>
+
     <string name="ivao_status_url">http://www.ivao.aero/whazzup/status.txt</string>
 </resources>

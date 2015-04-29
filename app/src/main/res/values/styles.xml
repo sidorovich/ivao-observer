@@ -2,7 +2,26 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!-- Customize your theme here. -->
+    </style>
+
+    <style name="WindowBackground">
+        <item name="android:background">@color/backgroundColor</item>
+    </style>
+
+    <style name="SimpleText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="WarningMessageText" parent="SimpleText">
+        <item name="android:textColor">@color/warningMessageColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MainLogo">
+        <item name="android:layout_marginTop">25sp</item>
+        <item name="android:layout_marginBottom">25sp</item>
     </style>
 
 </resources>

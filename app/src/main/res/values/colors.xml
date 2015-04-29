@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#333333</color>
+    <color name="textColor">#cccccc</color>
+    <color name="activeColor">#ffa500</color>
+    <color name="warningMessageColor">#ffa500</color>
+    <color name="lightBackground">#444444</color>
+</resources>
