@@ -27,12 +27,13 @@ public class MainActivity extends Activity
             TextView warningMessageTv = (TextView) findViewById(R.id.warningMessage);
             warningMessageTv.setText(networkStatus.getWhazzupUrl());
         }
+
     }
 
     private void prepareProgressDialog()
     {
         mProgressDialog = new ProgressDialog(this);
-        mProgressDialog.setMessage("A message");
+        mProgressDialog.setMessage("Loading data from IVAO");
         mProgressDialog.setIndeterminate(true);
         mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         mProgressDialog.setCancelable(true);

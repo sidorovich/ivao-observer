@@ -5,4 +5,63 @@
     <string name="empty_whazzup_url">Empty URL for getting network info. Try again later.</string>
 
     <string name="ivao_status_url">http://www.ivao.aero/whazzup/status.txt</string>
+
+    <string name="facility_type_observer">Observer</string>
+    <string name="facility_type_fis">Flight Information</string>
+    <string name="facility_type_delivery">Delivery</string>
+    <string name="facility_type_ground">Ground</string>
+    <string name="facility_type_tower">Tower</string>
+    <string name="facility_type_approach">Approach</string>
+    <string name="facility_type_acc">ACC</string>
+    <string name="facility_type_departure">Departure</string>
+    
+    <string name="administrative_rating_suspended">Suspended</string>
+    <string name="administrative_rating_observer">Observer</string>
+    <string name="administrative_rating_user">User</string>
+    <string name="administrative_rating_supervisor">Supervisor</string>
+    <string name="administrative_rating_administrator">Administrator</string>
+    
+    <string name="atc_rating_obs">Observer</string>
+    <string name="atc_rating_as1">ATC Applicant (AS1)</string>
+    <string name="atc_rating_as2">ATC Trainee (AS2)</string>
+    <string name="atc_rating_as3">Advanced ATC Trainee (AS3)</string>
+    <string name="atc_rating_adc">Aerodrome Controller (ADC)</string>
+    <string name="atc_rating_apc">Approach Controller (APC)</string>
+    <string name="atc_rating_acc">Center Controller (ACC)</string>
+    <string name="atc_rating_sec">Senior Controller (SEC)</string>
+    <string name="atc_rating_sai">Senior ATC Instructor (SAI)</string>
+    <string name="atc_rating_cai">Chief ATC Instructor (CAI)</string>
+
+    <string name="pilot_rating_obs">Observer</string>
+    <string name="pilot_rating_fs1">Basic Flight Student (FS1)</string>
+    <string name="pilot_rating_fs2">Flight Student (FS2)</string>
+    <string name="pilot_rating_fs3">Advanced Flight Student (FS3)</string>
+    <string name="pilot_rating_pp">Private Pilot (PP)</string>
+    <string name="pilot_rating_spp">Senior Private Pilot (SPP)</string>
+    <string name="pilot_rating_cp">Commercial Pilot (CP)</string>
+    <string name="pilot_rating_atp">Airline Transport Pilot (ATP)</string>
+    <string name="pilot_rating_sfi">Senior Flight Instructor (SFI)</string>
+    <string name="pilot_rating_cfi">Chief Flight Instructor (CFI)</string>
+
+    <string name="simulator_unknown">Unknown</string>
+    <string name="simulator_msfs95">Microsoft Flight Simulator 95</string>
+    <string name="simulator_msfs98">Microsoft Flight Simulator 98</string>
+    <string name="simulator_mscfs">Microsoft Combat Flight Simulator</string>
+    <string name="simulator_msfs2k">Microsoft Flight Simulator 2000</string>
+    <string name="simulator_mscfs2">Microsoft Combat Flight Simulator 2</string>
+    <string name="simulator_msfs2002">Microsoft Flight Simulator 2002</string>
+    <string name="simulator_mscfs3">Microsoft Combat Flight Simulator 3</string>
+    <string name="simulator_msfs9">Microsoft Flight Simulator 2004</string>
+    <string name="simulator_msfsx">Microsoft Flight Simulator X</string>
+    <string name="simulator_xp">X-Plane (unknown version)</string>
+    <string name="simulator_xp8">X-Plane 8.x</string>
+    <string name="simulator_xp9">X-Plane 9.x</string>
+    <string name="simulator_xp10">X-Plane 10.x</string>
+    <string name="simulator_ps1">PS1</string>
+    <string name="simulator_xp11">X-Plane 11.x</string>
+    <string name="simulator_xp12">X-Plane 12.x</string>
+    <string name="simulator_fly">Fly!</string>
+    <string name="simulator_fly2">Fly! 2</string>
+    <string name="simulator_fg">FlightGear</string>
+    <string name="simulator_prepar">Prepar3D 1.x</string>
 </resources>
