@@ -17,8 +17,8 @@ public class ResultContainer
     public ResultContainer()
     {
         generalInfo = new GeneralInfo();
-        atc = new ArrayList<Atc>();
-        pilots = new ArrayList<Pilot>();
+        atc = new ArrayList<>();
+        pilots = new ArrayList<>();
     }
 
     public GeneralInfo generalInfo()
