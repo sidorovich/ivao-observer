@@ -31,12 +31,14 @@ public class NetworkStatus
 
     public String getMessage()
     {
-        return storage.getAsString(MESSAGE);
+        String message = storage.getAsString(MESSAGE);
+        return (message != null) ? message : "";
     }
 
     public String getWhazzupUrl()
     {
-        return storage.getAsString(WHAZZUP);
+        String url = storage.getAsString(WHAZZUP);
+        return (url != null) ? url : "";
     }
 
     public void store(SharedPreferences preferences)

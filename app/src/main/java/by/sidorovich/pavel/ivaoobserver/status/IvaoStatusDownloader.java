@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 
-import by.sidorovich.pavel.ivaoobserver.BuildConfig;
 import by.sidorovich.pavel.ivaoobserver.MainActivity;
 import by.sidorovich.pavel.ivaoobserver.R;
 
@@ -26,7 +25,7 @@ public class IvaoStatusDownloader
     {
         long diff = System.currentTimeMillis() - preferences.getLong(STATUS_LAST_UPDATE, 0);
 
-        if (BuildConfig.DEBUG || (diff / (24 * 60 * 60 * 1000) > 1)) { // once per day
+        if (diff / (24 * 60 * 60 * 1000) > 1) { // once per day
 
             final DownloadStatusTask downloadStatusTask = new DownloadStatusTask(activity);
             downloadStatusTask.execute(activity.getResources().getString(R.string.ivao_status_url));

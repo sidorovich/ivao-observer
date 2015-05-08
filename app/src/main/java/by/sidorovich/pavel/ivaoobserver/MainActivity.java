@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import by.sidorovich.pavel.ivaoobserver.state.NetworkState;
 import by.sidorovich.pavel.ivaoobserver.status.IvaoStatusDownloader;
 import by.sidorovich.pavel.ivaoobserver.status.NetworkStatus;
 
@@ -28,6 +29,7 @@ public class MainActivity extends Activity
             warningMessageTv.setText(networkStatus.getWhazzupUrl());
         }
 
+        (new NetworkState(this, networkStatus.getWhazzupUrl())).refresh();
     }
 
     private void prepareProgressDialog()
@@ -41,7 +43,8 @@ public class MainActivity extends Activity
 
     private void showWarningMessage()
     {
-        String warningMessage = (networkStatus == null) ? getResources().getString(R.string.something_wrong) : "";
+        String warningMessage = (networkStatus == null) ? getResources().getString(R.string.something_wrong)
+                : networkStatus.getMessage();
 
         if (networkStatus != null) {
             String whazzupUrl = networkStatus.getWhazzupUrl();

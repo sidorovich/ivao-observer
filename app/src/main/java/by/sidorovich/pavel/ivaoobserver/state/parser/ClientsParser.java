@@ -1,4 +1,4 @@
-package by.sidorovich.pavel.ivaoobserver.networkData;
+package by.sidorovich.pavel.ivaoobserver.state.parser;
 
 import java.security.InvalidParameterException;
 import java.text.DateFormat;
@@ -6,12 +6,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-import by.sidorovich.pavel.ivaoobserver.core.pilot.FlightPlan;
 import by.sidorovich.pavel.ivaoobserver.core.Atc;
 import by.sidorovich.pavel.ivaoobserver.core.NetworkClient;
 import by.sidorovich.pavel.ivaoobserver.core.Pilot;
+import by.sidorovich.pavel.ivaoobserver.core.pilot.FlightPlan;
+import by.sidorovich.pavel.ivaoobserver.state.ResultContainer;
 
-final public class IvaoLineParser
+final public class ClientsParser implements ParserInterface
 {
     final private static String DELIMITER = ":";
 
@@ -64,27 +65,30 @@ final public class IvaoLineParser
     final private static int DATA_INDEX_SIMULATOR = 47;
     final private static int DATA_INDEX_MTL_PLANE = 48;
 
-    public static NetworkClient parse(String row)
+    @Override
+    public ResultContainer parseString(String string, ResultContainer result)
     {
-        String[] split = row.split(DELIMITER);
-        NetworkClient result;
+        String[] split = string.split(DELIMITER);
 
         try {
-            switch (split[3]) {
+            switch (split[DATA_INDEX_CLIENT_TYPE]) {
                 case NetworkClient.TYPE_PILOT:
-                    result = parseAsPilot(split);
+                    result.appendPilot(parseAsPilot(split));
                     break;
+
                 case NetworkClient.TYPE_ATC:
-                    result = parseAsAtc(split);
+                    result.appendAtc(parseAsAtc(split));
                     break;
+
                 case NetworkClient.TYPE_FOLLOW_ME:
-                    result = null;
+                    // @todo: add follow me
                     break;
+
                 default:
                     throw new InvalidParameterException("Unknown or empty client type " + split[3]);
             }
         } catch (Exception e) {
-            result = null;
+            e.printStackTrace();
         }
 
         return result;
