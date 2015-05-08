@@ -45,6 +45,11 @@ public class GeneralInfo
         }
     }
 
+    public long nextUpdateTime()
+    {
+        return timestamp.getTime() + reloadInterval * 60000;
+    }
+
     public void setClientsCount(int clientsCount)
     {
         this.clientsCount = clientsCount;

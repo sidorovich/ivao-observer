@@ -3,7 +3,6 @@ package by.sidorovich.pavel.ivaoobserver.state;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import by.sidorovich.pavel.ivaoobserver.MainActivity;
 
@@ -39,20 +38,22 @@ public class NetworkState
                 }
             });
 
+            long nextUpdateTime = System.currentTimeMillis() + 120000;
+
             try {
                 result = downloadStateTaskTask.get();
 
                 if (result != null) {
-                    Log.d("mylogs", "Pilots: " + String.valueOf(result.pilots().size()));
-                    Log.d("mylogs", "ATCs: " + String.valueOf(result.atc().size()));
+                    nextUpdateTime = result.generalInfo().nextUpdateTime();
                 }
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
             preferences.edit()
                     .putLong(STATE_LAST_UPDATE, System.currentTimeMillis())
-                    .putLong(STATE_NEXT_UPDATE, System.currentTimeMillis() + 120000)
+                    .putLong(STATE_NEXT_UPDATE, nextUpdateTime)
                     .apply();
         }
     }
